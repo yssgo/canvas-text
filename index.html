@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head profile="http://www.w3.org/2005/10/profile">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>궁서체(淸原高)</title>
+
+  <!--auto generated links by Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <!--END of auto generated links by Google font-->
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="script.js" defer></script>
+</head>
+
+<body onload="body_onload();">
+  <div id="size-button-div" class="button-div">
+    <button onclick="resize_font(+10);">+10</button>
+    <button onclick="resize_font(-10);">-10</button>
+    <button onclick="resize_font(+50);">+50</button>
+    <button onclick="resize_font(-50);">-50</button>
+    <button onclick="resize_font(+100);">+100</button>
+    <button onclick="resize_font(-100);">-100</button>
+    <button onclick="resize_font(+200);">+200</button>
+    <button onclick="resize_font(-200);">-200</button>
+  </div>
+  <canvas id="drawing-canvas" width="400" height="115"> </canvas>
+  <div id="option-div">
+    <table id="canvas-options">
+      <tr id="canvas-size">
+        <td>
+          <label for="width-entry">가로</label>
+          <input type="number" size="3" id="width-entry" min="1" max="9999" value="400" onchange="reset_canvas();">
+          <label for="height-entry">세로</label>
+          <input type="number" size="3" id="height-entry" min="1" max="9999" value="115" onchange="reset_canvas();">
+        </td>
+      </tr>
+      <tr id="text-options">
+        <td id="text-options-cell">
+          <input list="word-list" id="word-entry" value="누울래?" size="10" onchange="reset_canvas();" >
+          <datalist id="word-list">
+            <option value="누울래?"></option>
+            <option value="로꼬chu"></option>
+            <option value="淸原高"></option>            
+          </datalist>
+          <input type="text" id="combo-entry" value="궁서" size="10" onchange="reset_canvas();">
+          <select id="combo-list" onchange="fill_combo_entry();reset_canvas();">
+            <option value="Yuji Syuku">Yuji Syuku</option>            
+            <option value="궁서" selected>궁서</option>
+            <option value="굴림">굴림</option>
+            <option value="돋움">돋움</option>
+            <option value="돋움">바탕</option>
+            <option value="궁서체">궁서체</option>
+            <option value="굴림체">굴림체</option>
+            <option value="돋움체">돋움체</option>
+            <option value="돋움체">바탕체</option>
+            <option value="맑은고딕">맑은고딕</option>
+            <option value="D2Coding">D2Coding</option>
+            <option value="나눔고딕코딩">나눔고디코딩</option>            
+          </select>
+          <button onclick="reset_canvas();">&#x27f3;</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="clipboard-button-div" class="button-div">
+    <button id="copy-button" onclick="copy_button_clicked()">복사</button>
+    <button onclick="downloadCanvasAsImage()">다운로드</button>
+  </div>
+  <div id="copied-verify-div">
+    <p>클립보드에 복사되었습니다.</p>
+    <p><button onclick="hide_copied_popup()">확인</button></p>
+  </div>
+  
+</body>
+
+</html>

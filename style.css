@@ -1,0 +1,40 @@
+#canvas {
+    display: inline-block;
+}
+#copied-verify-div {
+  display: none;
+  position: fixed;
+  left: 5rem;
+  top: 2rem;
+  z-index: 2;
+  text-align: center;
+  border: 2px solid dimgray;
+  padding: 1rem;
+  color:black;
+  background-color: silver;
+}
+.button-div {
+  vertical-align: middle; 
+  inline-height: 3rem;  
+}
+.button-div > button {
+  display:inline-block;  
+  height: 2rem;
+  margin: auto;
+}
+#clipboard-button-div {
+  position:relative;  
+  left: 8rem;
+  margin-top: 10px;
+}
+#option-div {
+  position:relative;
+  left: 4rem;
+}
+.hotkey {
+  text-decoration: underline;
+}
+
+table#canvas-options {
+  border-bottom: 1px gray solid;
+}
