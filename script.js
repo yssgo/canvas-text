@@ -134,7 +134,7 @@ function reset_canvas()
 function fill_combo_entry(){
     let combo_entry = document.querySelector('#combo-entry');
     let combo_list = document.querySelector('#combo-list');
-    let option = combo_list.optons[combo_list.selectedIndex];
+    let option = combo_list.options[combo_list.selectedIndex];
     let option_fontname = option.value;
     
     // innerText is more appropriate for this purpose.
