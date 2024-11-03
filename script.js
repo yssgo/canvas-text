@@ -24,7 +24,7 @@ function drawStuff(){
     current_fontname = current_font_displayname = document.querySelector("#combo-entry").value;    
     let found = 0;
     for(let i=0; !found && i < combo_list.options.length; i++){
-        let option = combo_list.optons[i];
+        let option = combo_list.options[i];
         // innerText is more appropriate for this purpose.
         // I've however chosen textContent to prevent Reflow.    
         let option_font_displayname = option.textContent || option.innerText;
