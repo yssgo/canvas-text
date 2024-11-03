@@ -28,15 +28,15 @@
     <button onclick="resize_font(+200);">+200</button>
     <button onclick="resize_font(-200);">-200</button>
   </div>
-  <canvas id="drawing-canvas" width="600" height="20"> </canvas>
+  <canvas id="drawing-canvas" width="1000" height="50"> </canvas>
   <div id="option-div">
     <table id="canvas-options">
       <tr id="canvas-size">
         <td>
           <label for="width-entry">가로</label>
-          <input type="number" size="3" id="width-entry" min="1" max="9999" value="600" onchange="reset_canvas();">
+          <input type="number" size="3" id="width-entry" min="1" max="9999" value="1000" onchange="reset_canvas();">
           <label for="height-entry">세로</label>
-          <input type="number" size="3" id="height-entry" min="1" max="9999" value="20" onchange="reset_canvas();">
+          <input type="number" size="3" id="height-entry" min="1" max="9999" value="50" onchange="reset_canvas();">
         </td>
       </tr>
       <tr id="text-options">
