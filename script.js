@@ -14,9 +14,28 @@ function drawStuff(){
     let entry = document.querySelector('#word-entry');
     let word = entry.value;
     let draw_context = canvas.getContext('2d');
-    let fontname ="Yuji Syuku";
-    fontname = document.querySelector("#combo-entry").value;
-    draw_context.font = ((canvas.width-20)*1.0/word.length) + "px '"+ fontname+"'";
+    let current_fontname = "Yuji Syuku";
+    let current_font_displayname = "Yuji Syuku";
+
+    let combo_entry = document.querySelector('#combo-entry');
+    let combo_list = document.querySelector('#combo-list');    
+    
+    
+    current_fontname = current_font_displayname = document.querySelector("#combo-entry").value;    
+    let found = 0;
+    for(let i=0; !found && i < combo_entry.options.length; i++){
+        let option = combo_list.optons[i];
+        // innerText is more appropriate for this purpose.
+        // I've however chosen textContent to prevent Reflow.    
+        let option_font_displayname = option.textContent || option.innerText;
+        let option_fontname = combo_list.value;
+        if(current_font_displayname == option_font_displayname){
+            current_font_displayname = option_font_displayname;
+            current_fontname = option_fontname;
+            found = 1;            
+        }
+    }
+    draw_context.font = ((canvas.width-20)*1.0/word.length) + "px '"+ current_fontname+"'";
     draw_context.textBaseline = 'top';
     draw_context.fillText(word, 10, 10);
 }
@@ -115,6 +134,13 @@ function reset_canvas()
 function fill_combo_entry(){
     let combo_entry = document.querySelector('#combo-entry');
     let combo_list = document.querySelector('#combo-list');
-    let fontname = combo_list.value;
-    combo_entry.value = fontname;
+    let option = combo_list.optons[combo_list.selectedIndex];
+    let option_fontname = option.value;
+    
+    // innerText is more appropriate for this purpose.
+    // I've however chosen textContent to prevent Reflow.
+    let option_font_displayname = option.textContent || option.innerText;
+    
+    //combo_entry.value = option_fontname;
+    combo_entry.value = option_font_displayname;
 }
