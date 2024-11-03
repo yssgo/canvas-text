@@ -1,3 +1,36 @@
+@font-face {
+  font-family: HangulNemoHand;
+  src: 
+    url('./HangulNemoHand.woff') format('woff'),
+    ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HangulNemoHandBold;
+  src: 
+    url('./HangulNemoHandBold.woff') format('woff'),
+    ;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: HangulNemoTaza;
+  src: 
+    url('./HangulNemoTaza.woff') format('woff'),
+    ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: HangulNemoTazaBold;
+  src: 
+    url('./HangulNemoHandTaza.woff') format('woff'),
+    ;
+  font-weight: bold;
+  font-style: normal;
+}
+
 #canvas {
     display: inline-block;
 }
