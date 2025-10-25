@@ -35,7 +35,7 @@
   font-family: HangulNemoTazaBold;
   src:
     local('HangulNemoTazaBold') format('truetype'),
-    url('./HangulNemoHandTaza.woff') format('woff');
+    url('./HangulNemoTazaBold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
